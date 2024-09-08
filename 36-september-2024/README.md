@@ -1,1 +1,1 @@
-![Diagonal colorful circle trails](/assets/preview.png "Preview of the sketch")
+![Diagonal colorful circle trails](/assets/preview.jpg "Preview of the sketch")
