@@ -1,4 +1,4 @@
-const INTERVAL = 3000;
+const INTERVAL = 1000;
 
 let word = "";
 let allWords = [];
@@ -14,7 +14,6 @@ function setup() {
   allWords = jsonData.text.split(" ");
   word = allWords[0];
   createCanvas(window.innerWidth, window.innerHeight);
-  textSize(32);
   createLetterObjects();
 }
 
@@ -59,6 +58,7 @@ class Letter {
   }
 
   draw(x, y) {
+    textSize(32);
     text(this.character, this.x + x, this.y + y);
   }
 }
