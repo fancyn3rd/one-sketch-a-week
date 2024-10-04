@@ -28,7 +28,7 @@ function draw() {
   });
 }
 
-function mouseReleased() {
+function mouseDragged() {
   connections[connectionCounter].points.push({ x: mouseX, y: mouseY });
 }
 
