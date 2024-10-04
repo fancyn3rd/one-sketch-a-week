@@ -15,7 +15,7 @@ function draw() {
     points.forEach((point, index) => {
       if (points[index] && points[index + 1]) {
         stroke(color(connection.color));
-        strokeWeight(random(10));
+        strokeWeight(randomGaussian(5));
         line(point.x, point.y, points[index + 1].x, points[index + 1].y);
         line(
           point.x + OFFSET,
