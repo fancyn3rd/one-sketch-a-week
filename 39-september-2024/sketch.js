@@ -2,10 +2,24 @@ let connections = [{ points: [], color: null }];
 let connectionCounter = 0;
 const OFFSET = 10;
 
+const colors = [
+  "rgba(77, 238, 234, 1)",
+  "rgba(116, 238, 21, 1)",
+  "rgba(255,231,0, 1)",
+  "rgba(240,0,255, 1)",
+  "rgba(0,30,255, 1)",
+  "rgba(255, 47, 142, 1)",
+  "rgba(255, 158, 76, 1)",
+  "rgba(255, 214, 0, 1)",
+  "rgba(102, 223, 72, 1)",
+  "rgba(106, 119, 221, 1)",
+  "rgba(152, 3, 206, 1)",
+];
+
 function setup() {
   frameRate(10);
   createCanvas(window.innerWidth, window.innerHeight);
-  connections[0].color = color(random(255), random(255), random(255));
+  connections[0].color = color(colors[floor(random(colors.length))]);
 }
 
 function draw() {
@@ -35,7 +49,7 @@ function mouseReleased() {
 function keyReleased() {
   if (key === "n") {
     connectionCounter += 1;
-    const newColor = color(random(255), random(255), random(255));
+    const newColor = color(colors[floor(random(colors.length))]);
     connections.push({ points: [], color: newColor });
   }
 }
